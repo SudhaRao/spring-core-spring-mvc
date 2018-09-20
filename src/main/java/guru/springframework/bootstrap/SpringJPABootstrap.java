@@ -153,6 +153,23 @@ public class SpringJPABootstrap implements ApplicationListener<ContextRefreshedE
 
         user3.setCustomer(customer3);
         userService.saveOrUpdate(user3);
+        
+        User user4 = new User();
+        user4.setUsername("sudharao");
+        user4.setPassword("password");
+        Customer customer4 = new Customer();
+        customer4.setFirstName("Sudha");
+        customer4.setLastName("Rao");
+        customer4.setBillingAddress(new Address());
+        customer4.getBillingAddress().setAddressLine1("One honet sudha's road");
+        customer4.getBillingAddress().setCity("Shakopee");
+        customer4.getBillingAddress().setState("MN");
+        customer4.getBillingAddress().setZipCode("55344");
+        customer4.setEmail("sudharao@gmail.com");
+        customer4.setPhoneNumber("305.426.9832");
+
+        user4.setCustomer(customer4);
+        userService.saveOrUpdate(user4);
     }
 
     public void loadProducts(){
